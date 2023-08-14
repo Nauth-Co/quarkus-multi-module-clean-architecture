@@ -1,2 +1,14 @@
 rootProject.name = 'quarkus-multi-module-clean-architecture'
 
+fileTree(rootProject.projectDir) {
+    include '**/*.gradle'
+    exclude 'build', 'buildSrc', '**/gradle', 'settings.gradle', '/src', '/build.gradle', 'out'
+}.forEach { module ->
+    String name = module.parentFile.name
+    String path = ':'.concat(name)
+    include path
+    def subproject = findProject("${path}")
+    subproject.name = module.parentFile.parentFile.name.concat('-'.concat(name))
+    subproject.projectDir = module.parentFile
+    subproject.buildFileName = module.name
+}
