@@ -5,13 +5,13 @@ Welcome to the repository showcasing the implementation of Clean Architecture us
 == Table of Contents
 
 - <<introduction>>
-- <<SettingUptheProject>>
-- <<UnderstandingCleanArchitecture>>
-- <<BuildingtheLayers>>
-- <<DependencyInjectionandTesting>>
-- <<DataPersistencewithQuarkus>>
-- <<Conclusion>>
-- [Additional Resources](=additional-resources)
+- <<setting-up-the-project>>
+- <<understanding-clean-architecture>>
+- <<building-the-layers>>
+- <<dependency-injection-and-testing>>
+- <<data-persistence-with-quarkus>>
+- <<conclusion>>
+- <<additional-resources>>
 
 == Introduction [[introduction]]
 
@@ -20,38 +20,38 @@ We'll harness the prowess of Quarkus, the speedster of Java frameworks, and wiel
 
 Read the full blog post: [Coding for the Future: Clean Architecture Implementation Using Quarkus and Java 17](link-to-your-blog-post)
 
-== Setting Up the Project [[SettingUptheProject]]
+== Setting Up the Project [[setting-up-the-project]]
 
 Follow the instructions provided in the blog post to set up your project environment.
 We'll guide you through creating a Java Gradle project, adding necessary repositories, enlisting the help of Gradle plugins like Lombok and Quarkus, and managing the magic with plugin management configurations.
 With these preparations, you'll be equipped to build a robust and structured application.
 
-== Understanding Clean Architecture [[UnderstandingCleanArchitecture]]
+== Understanding Clean Architecture [[understanding-clean-architecture]]
 
 Learn the core principles of Clean Architecture and how it enhances the maintainability and scalability of your applications.
 Discover how the layers – from Frameworks & Drivers to Domain and Infrastructure – create a separation of concerns, enabling a codebase that's both organized and adaptable.
 
-== Building the Layers [[BuildingtheLayers]]
+== Building the Layers [[building-the-layers]]
 
 Dive into the heart of the project as we construct each layer of Clean Architecture.
 With practical examples, we'll demonstrate how to create entities, use cases, adapters, and interfaces, all while keeping the layers distinct and maintaining the flow of data between them.
 
-== Dependency Injection and Testing [[DependencyInjectionandTesting]]
+== Dependency Injection and Testing [[dependency-injection-and-testing]]
 
 Explore how dependency injection strengthens the boundaries between layers.
 Discover Quarkus' support for dependency injection and learn how to write effective unit tests and integration tests to ensure the reliability of your application's architecture.
 
-== Data Persistence with Quarkus [[DataPersistencewithQuarkus]]
+== Data Persistence with Quarkus [[data-persistence-with-quarkus]]
 
 See how Quarkus simplifies data persistence within the Clean Architecture paradigm.
 We'll guide you through database interactions, repository management, and the seamless integration of data while adhering to the principles of Clean Architecture.
 
-== Conclusion [[Conclusion]]
+== Conclusion [[conclusion]]
 
 Wrap up your journey by reviewing the key takeaways from our blog post.
 Embrace the harmony between Clean Architecture, Quarkus, and Java 17, and equip yourself with the tools to craft applications that stand strong against the winds of change.
 
-== Additional Resources
+== Additional Resources [[additional-resources]]
 
 Explore further with these resources:
 
