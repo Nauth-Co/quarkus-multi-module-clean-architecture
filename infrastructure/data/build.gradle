@@ -1,0 +1,7 @@
+dependencies {
+    implementation project(':domain-model')
+    implementation project(':business-repository')
+    implementation 'io.quarkus:quarkus-panache-common'
+    implementation 'io.quarkus:quarkus-hibernate-reactive-panache'
+    implementation 'io.quarkus:quarkus-reactive-mysql-client'
+}

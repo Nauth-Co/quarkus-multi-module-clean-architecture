@@ -1,10 +1,10 @@
 = Clean Architecture: Infrastructure Data Module
 
-This module handles database persistence logic and data storage, ensuring a clear separation between business logic and data storage mechanisms.
+This module serves as the backbone of data management, implementing repository interfaces defined in the `business-repository` module using Quarkus Hibernate Reactive Panache. By leveraging Quarkus' powerful extensions, including Hibernate Reactive Panache and MySQL integration, the `infrastructure/data` module offers a responsive and efficient data management solution.
 
 == Module Overview
 
-The `infrastructure/data` module is responsible for managing the database persistence logic and data storage of our Clean Architecture project. It encapsulates the implementation details of interacting with the database, ensuring that the core business logic remains decoupled from the specifics of data storage technologies.
+The `infrastructure/data` module is responsible for implementing the repository contracts defined in the `business-repository` module. It integrates seamlessly with Quarkus Hibernate Reactive Panache, a reactive JPA framework, to manage data persistence. Additionally, it interacts with a MySQL database using reactive patterns for efficient and scalable database operations.
 
 == Java Base Package
 
@@ -12,18 +12,24 @@ The Java base package for this module is: `com.nauth.example.infrastructure.data
 
 == Key Responsibilities
 
-- Implement data storage logic, including CRUD (Create, Read, Update, Delete) operations.
-- Utilize the interfaces defined in `business/repository` for data access contracts.
-- Decouple the business logic from the intricacies of data storage technologies.
-
-== Usage
-
-1. Navigate to the `clean-architecture-project/infrastructure/data` directory.
-2. Implement your database persistence logic, focusing on data storage and retrieval operations.
+- Implement repository interfaces defined in the `business-repository` module using Panache's reactive database repository classes.
+- Translate between core domain models from the `domain-model` module and JPA entities.
+- Manage data persistence using Quarkus Hibernate Reactive Panache.
+- Integrate with a MySQL database using the `io.quarkus:quarkus-reactive-mysql-client` extension.
 
 == Dependencies
 
-This module may depend on the following:
-- `business/repository` for data access contracts.
-- `domain/model` for domain models.
-- `infrastructure/properties` for access to mapped environment properties (runtime or buildtime).
+This module depends on the following modules and Quarkus extensions:
+
+- `domain/model`: Provides core domain models.
+- `business-repository`: Contains repository contracts that this module implements.
+- `io.quarkus:quarkus-panache-common`: Common utilities for Panache entities.
+- `io.quarkus:quarkus-hibernate-reactive-panache`: Quarkus extension for Hibernate Reactive Panache.
+- `io.quarkus:quarkus-reactive-mysql-client`: Quarkus extension for reactive MySQL database operations.
+
+== Configuration Steps
+
+1. Navigate to the `clean-architecture-project/infrastructure/data` directory.
+2. Open the `build.gradle` file and ensure the necessary dependencies, including `domain-model`, `business-repository`, and Quarkus extensions, are defined.
+3. Implement repository interfaces from the `business-repository` module using Panache's reactive database repository classes.
+4. Utilize the power of reactive database operations for efficient and scalable data management.
