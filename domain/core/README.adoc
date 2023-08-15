@@ -1,0 +1,30 @@
+= Clean Architecture: Domain Core Module
+
+This module contains the heart of our business domain, including the implementation of use cases and shared domain models.
+
+== Module Overview
+
+The `domain/core` module represents the heart of our Clean Architecture project, containing the implementation of the business use cases and shared domain models. This module captures the essence of our application's logic and data structures, ensuring that the core business rules remain isolated from external components.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.domain.core`
+
+== Key Responsibilities
+
+- Implement business use cases and logic that define the core behavior of the application.
+- Define domain models that encapsulate the key entities and data structures within the business domain.
+- Emphasize the business rules and logic, maintaining the integrity and coherence of the application.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/domain/core` directory.
+2. Implement your business use case interfaces and shared domain models that define the core application behavior.
+
+== Dependencies
+
+This module may depend on the following:
+- `business/repository` for data access operations.
+- `business/service` for integrated external service interactions.
+- `business/usecase` for implementing business logic.
+- `infrastructure/properties` for access to mapped environment properties (runtime or buildtime).

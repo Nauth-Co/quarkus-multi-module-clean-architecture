@@ -1,0 +1,29 @@
+= Clean Architecture: Infrastructure Service Client - REST Module
+
+This module contains client adapters for making RESTful HTTP requests to external services, ensuring smooth communication with REST APIs.
+
+== Module Overview
+
+The `infrastructure/service/client/rest` module is dedicated to implementing client adapters that facilitate RESTful HTTP communication with external services. It encapsulates the logic required for making HTTP requests, handling responses, and abstracting the specifics of REST API communication.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.client.rest`
+
+== Key Responsibilities
+
+- Implement client adapters for making RESTful HTTP requests.
+- Handle request configuration, response processing, and error handling.
+- Abstract away the complexities of HTTP communication from the core business logic.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/infrastructure/service/client/rest` directory.
+2. Implement client adapters for making RESTful HTTP requests to external services.
+
+== Dependencies
+
+This module may depend on the following:
+- `business/service` for integrated external service contracts.
+- `domain/model` for accessing domain models.
+- `infrastructure/properties` for accessing environment properties configuration.

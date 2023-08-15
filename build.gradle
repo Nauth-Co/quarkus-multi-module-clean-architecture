@@ -8,8 +8,10 @@ plugins {
 group = 'com.nauth.example'
 version = '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
 subprojects {

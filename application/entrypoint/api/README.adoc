@@ -1,0 +1,30 @@
+= Clean Architecture: EntryPoint API Module
+
+This module serves as the entry point for our Clean Architecture project, exposing HTTP REST controllers to serve microservices endpoints.
+
+== Module Overview
+
+The `entrypoint/api` module is responsible for handling incoming HTTP requests and directing them to the appropriate business use cases defined in the `business/usecase` module. It acts as a bridge between external clients and the core business logic, ensuring that the Clean Architecture's boundaries are maintained.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.entrypoint.api`
+
+== Key Responsibilities
+
+- Exposes REST endpoints to serve various microservices.
+- Transforms incoming requests into input for the corresponding use cases.
+- Orchestrates the interaction between external clients and the business use cases.
+- Enforces validation and input sanitization at the entry point.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/application/entrypoint/api` directory.
+2. Implement your REST controllers, mapping them to appropriate use cases.
+
+== Dependencies
+
+This module may depend on the following:
+
+- `business/usecase` for executing business logic.
+- `domain/model` for accessing domain entities and models.

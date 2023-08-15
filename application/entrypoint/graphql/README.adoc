@@ -1,0 +1,30 @@
+= Clean Architecture: EntryPoint GraphQL Module
+
+This module contains GraphQL builders to define the GraphQL schema and resolvers for querying and manipulating data.
+
+== Module Overview
+
+The `entrypoint/graphql` module is dedicated to setting up and defining the GraphQL schema for our Clean Architecture project. It provides a unified entry point for querying and manipulating data through GraphQL queries and mutations. By abstracting the data retrieval and manipulation, this module maintains the separation of concerns and the integrity of our architecture.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.entrypoint.graphql`
+
+== Key Responsibilities
+
+- Define the GraphQL schema using GraphQL types, queries, and mutations.
+- Implement resolvers that bridge the GraphQL schema with the underlying business logic.
+- Ensure that the GraphQL API enforces the principles of Clean Architecture, maintaining clear boundaries between layers.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/application/entrypoint/graphql` directory.
+2. Define your GraphQL schema using GraphQL types, queries, and mutations.
+3. Implement resolvers that map GraphQL operations to corresponding business use cases.
+
+== Dependencies
+
+This module may depend on the following:
+
+- `business/usecase` for executing business logic.
+- `domain/model` for accessing domain models.

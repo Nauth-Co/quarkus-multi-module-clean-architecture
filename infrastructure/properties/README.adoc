@@ -1,0 +1,26 @@
+= Clean Architecture: Infrastructure Properties Module
+
+This module handles environment properties mapping, providing a centralized location for configuration and settings.
+
+== Module Overview
+
+The `infrastructure/properties` module focuses on environment properties mapping and configuration management within our Clean Architecture project. It serves as a central hub for storing and managing various configuration settings, ensuring that our application's behavior can be fine-tuned without altering the core business logic.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.infrastructure.properties`
+
+== Key Responsibilities
+
+- Implement environment properties mapping for configuration settings.
+- Provide a centralized location for retrieving configuration values.
+- Decouple configuration management from the business logic.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/infrastructure/properties` directory.
+2. Implement environment properties mapping and configuration retrieval logic.
+
+== Dependencies
+
+This module does not have direct dependencies on other modules. It's used to centralize configuration settings that may be utilized by various components.

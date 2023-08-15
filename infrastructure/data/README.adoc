@@ -1,0 +1,29 @@
+= Clean Architecture: Infrastructure Data Module
+
+This module handles database persistence logic and data storage, ensuring a clear separation between business logic and data storage mechanisms.
+
+== Module Overview
+
+The `infrastructure/data` module is responsible for managing the database persistence logic and data storage of our Clean Architecture project. It encapsulates the implementation details of interacting with the database, ensuring that the core business logic remains decoupled from the specifics of data storage technologies.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.infrastructure.data`
+
+== Key Responsibilities
+
+- Implement data storage logic, including CRUD (Create, Read, Update, Delete) operations.
+- Utilize the interfaces defined in `business/repository` for data access contracts.
+- Decouple the business logic from the intricacies of data storage technologies.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/infrastructure/data` directory.
+2. Implement your database persistence logic, focusing on data storage and retrieval operations.
+
+== Dependencies
+
+This module may depend on the following:
+- `business/repository` for data access contracts.
+- `domain/model` for domain models.
+- `infrastructure/properties` for access to mapped environment properties (runtime or buildtime).

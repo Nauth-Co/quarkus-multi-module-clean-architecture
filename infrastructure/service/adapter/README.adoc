@@ -1,0 +1,29 @@
+= Clean Architecture: Infrastructure Service Adapter Module
+
+This module contains Java library integration adapters for external logic integration, ensuring smooth communication with external components and logic.
+
+== Module Overview
+
+The `infrastructure/service/adapter` module is dedicated to integrating Java library services and adapters that enable seamless communication with external components. It bridges the gap between the core business logic and the specifics of external service APIs or libraries, ensuring that the integration process is smooth and follows Clean Architecture principles.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.service.adapter`
+
+== Key Responsibilities
+
+- Implement Java library integration adapters for external service communication.
+- Abstract away the intricacies of library-specific implementations from the core business logic.
+- Enable the core business logic to interact with external services in a clean and decoupled manner.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/infrastructure/service/adapter` directory.
+2. Implement Java library integration adapters, focusing on encapsulating service-specific communication details.
+
+== Dependencies
+
+This module may depend on the following:
+- `business/service` for integrated external service contracts.
+- `domain/model` for accessing domain models.
+- `infrastructure/properties` for accessing mapped environment properties (runtime or buildtime).

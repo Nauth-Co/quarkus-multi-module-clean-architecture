@@ -1,0 +1,41 @@
+= Clean Architecture: Application Microservice Module
+
+This module assembles the application logic and business use cases to create microservices ready for deployment.
+
+== Module Overview
+
+The `application/microservice` module acts as the glue that brings together the business use cases defined in the `business/usecase` module and orchestrates them into deployable microservices. It's responsible for handling the setup and configuration of Quarkus applications, ensuring that our Clean Architecture principles are seamlessly translated into functional microservices.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.application.microservice`
+
+== Key Responsibilities
+
+- Assemble the application by configuring and starting Quarkus.
+- Wire up the business use cases to corresponding entry points, whether they are REST controllers, GraphQL resolvers, or other communication channels.
+- Ensure that the assembled microservice adheres to Clean Architecture's layer separation and principles.
+
+== Usage
+
+1. Clone this repository.
+2. Navigate to the `clean-architecture-project/application/microservice` directory.
+3. Implement your microservice assembly logic, configuring Quarkus, and connecting entry points to business use cases.
+
+== Dependencies
+
+This module may depend on the following:
+
+- `domain/core` for executing business logic.
+- `entrypoint/api` for exposing REST endpoints.
+- `entrypoint/graphql` for defining GraphQL schema and resolvers.
+- `infrastructure/data` for persistence logic.
+- `service/adapter` for external libraries integration.
+- `client/rest` for external rest json services integration.
+- `client/soap` for external wsdl soap services integration.
+
+== Build and Run
+
+1. Make sure your project is synchronized using Gradle.
+2. Implement your microservice assembly logic.
+3. Run your microservice using the appropriate Gradle tasks or Quarkus commands.

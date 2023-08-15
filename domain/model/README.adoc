@@ -1,0 +1,26 @@
+= Clean Architecture: Domain Model Module
+
+This module contains shared domain models and general utilities that define the core data structures and logic of the business domain.
+
+== Module Overview
+
+The `domain/model` module encapsulates shared domain models and general utilities that serve as the building blocks for the core data structures and logic of the business domain. These models represent the fundamental entities and data structures that form the foundation of our application's business logic.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.domain.model`
+
+== Key Responsibilities
+
+- Define domain models that represent the core entities and data structures within the business domain.
+- Implement general utilities or helper classes that can be reused across different layers of the application.
+- Emphasize data consistency, validation, and other domain-specific logic within the models.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/domain/model` directory.
+2. Define your domain models and general utilities that form the core data structures and logic of the business domain.
+
+== Dependencies
+
+This module does not have direct dependencies on other modules. It provides essential building blocks that may be utilized by various layers of the application.

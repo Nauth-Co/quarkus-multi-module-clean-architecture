@@ -1,0 +1,29 @@
+= Clean Architecture: EntryPoint DTO Module
+
+This module contains shared Data Transfer Objects (DTOs) that standardize API operations independently of the communication protocol.
+
+== Module Overview
+
+The `entrypoint/dto` module focuses on defining Data Transfer Objects (DTOs) that serve as standardized representations of data for communication between different layers of our application. These DTOs are designed to abstract away the specific communication protocol, ensuring a consistent interface for our APIs regardless of whether they are REST or GraphQL endpoints.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.entrypoint.dto`
+
+== Key Responsibilities
+
+- Define DTOs that represent data exchanged between layers and communication protocols.
+- Encapsulate data fields and provide appropriate getters and setters.
+- Decouple the internal structure of the application from external communication details.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/application/entrypoint/dto` directory.
+2. Define your DTO classes, focusing on encapsulating data and ensuring communication protocol independence.
+
+== Dependencies
+
+This module may be used by the following:
+
+- `application/entrypoint/api` to define input and output DTOs for REST GraphQL endpoints.
+- `application/entrypoint/graphql` to define input and output DTOs for GraphQL endpoints.

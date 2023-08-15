@@ -1,0 +1,28 @@
+= Clean Architecture: Business Use Case Module
+
+This module defines interfaces business use cases, encapsulating the core application logic that defines the application's behavior.
+
+== Module Overview
+
+The `business/usecase` module forms the core of our Clean Architecture project. It houses the implementations of business use cases that orchestrate the application's behavior. By centralizing the core logic within this module, we maintain a clear distinction between application behavior and external components.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.business.usecase`
+
+== Key Responsibilities
+
+- Implement business use cases that define the application's behavior.
+- Utilize the interfaces defined in `business/repository` and `business/service` modules for data access and external interactions.
+- Enforce the principles of Clean Architecture, focusing on maintaining separation of concerns and layer boundaries.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/business/usecase` directory.
+2. Define your business use cases interfaces, encapsulating the core logic of the application.
+
+== Dependencies
+
+This module depend on the following:
+
+- `domain/model` for accessing domain models.

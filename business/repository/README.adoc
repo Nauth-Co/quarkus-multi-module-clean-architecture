@@ -1,0 +1,27 @@
+= Clean Architecture: Business Repository Module
+
+This module defines interfaces for accepted persistence operations, ensuring a clear separation between business logic and data storage.
+
+== Module Overview
+
+The `business/repository` module encapsulates the contracts for data access operations within the application. It defines interfaces that represent the accepted persistence operations that the application requires. By abstracting data access behind these interfaces, the module promotes a clean separation between business logic and data storage, adhering to the principles of Clean Architecture.
+
+== Java Base Package
+
+The Java base package for this module is: `com.nauth.example.business.repository`
+
+== Key Responsibilities
+
+- Define interfaces for accepted data access operations, such as CRUD (Create, Read, Update, Delete) methods.
+- Abstract away the implementation details of data storage technologies, ensuring that the business logic remains decoupled from specific data storage mechanisms.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/business/repository` directory.
+2. Define your repository interfaces, encapsulating accepted persistence operations.
+
+== Dependencies
+
+This module depend on the following:
+
+- `domain/model` for accessing domain models.
