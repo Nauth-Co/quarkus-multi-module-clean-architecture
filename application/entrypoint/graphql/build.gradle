@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+dependencies {
+    api project(':domain-model')
+    api project(':entrypoint-dto')
+    api project(':business-usecase')
+
+    implementation 'io.quarkus:quarkus-smallrye-graphql'
+    // Additional dependencies related to the entrypoint/graphql module
+}

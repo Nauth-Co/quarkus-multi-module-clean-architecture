@@ -1,10 +1,10 @@
 = Clean Architecture: EntryPoint API Module
 
-This module serves as the entry point for our Clean Architecture project, exposing HTTP REST controllers to serve microservices endpoints.
+This module defines RESTful API endpoints that serve as entry points for external clients to interact with our microservices. It orchestrates communication between the external world and our application's core business logic.
 
 == Module Overview
 
-The `entrypoint/api` module is responsible for handling incoming HTTP requests and directing them to the appropriate business use cases defined in the `business/usecase` module. It acts as a bridge between external clients and the core business logic, ensuring that the Clean Architecture's boundaries are maintained.
+The `entrypoint/api` module acts as a gateway, exposing REST endpoints for external clients to interact with our microservices. It's responsible for handling incoming HTTP requests, marshaling data between external clients and our application's core, and ensuring adherence to Clean Architecture principles.
 
 == Java Base Package
 
@@ -12,19 +12,21 @@ The Java base package for this module is: `com.nauth.example.entrypoint.api`
 
 == Key Responsibilities
 
-- Exposes REST endpoints to serve various microservices.
-- Transforms incoming requests into input for the corresponding use cases.
-- Orchestrates the interaction between external clients and the business use cases.
-- Enforces validation and input sanitization at the entry point.
-
-== Usage
-
-1. Navigate to the `clean-architecture-project/application/entrypoint/api` directory.
-2. Implement your REST controllers, mapping them to appropriate use cases.
+- Define RESTful API endpoints using Quarkus annotations and reactive programming concepts.
+- Ensure that API endpoints communicate with the core business logic via the `business/usecase` module.
+- Leverage shared Data Transfer Objects (DTOs) from the `entrypoint/dto` module to standardize API operations independently of protocols.
 
 == Dependencies
 
-This module may depend on the following:
+This module depends on the following modules:
 
-- `business/usecase` for executing business logic.
-- `domain/model` for accessing domain entities and models.
+- `domain/model`: Provides core domain models.
+- `business/usecase`: Implements business use cases and logic.
+- `entrypoint/dto`: Contains shared Data Transfer Objects (DTOs) for standardized API operations.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/entrypoint/api` directory.
+2. Open the `build.gradle` file and ensure the correct dependencies are defined.
+3. Implement your RESTful API endpoints using Quarkus annotations and reactive programming.
+4. Utilize shared Data Transfer Objects (DTOs) from the `entrypoint/dto` module to standardize API operations.

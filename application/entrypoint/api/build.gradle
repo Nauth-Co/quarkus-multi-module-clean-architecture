@@ -1,0 +1,8 @@
+apply plugin: 'java-library'
+dependencies {
+    api project(':domain-model')
+    api project(':business-usecase')
+    api project(':entrypoint-dto')
+
+    implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+}

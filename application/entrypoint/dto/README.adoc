@@ -1,10 +1,10 @@
 = Clean Architecture: EntryPoint DTO Module
 
-This module contains shared Data Transfer Objects (DTOs) that standardize API operations independently of the communication protocol.
+This module is responsible for facilitating data transformation between core business domain models and external interfaces using Data Transfer Objects (DTOs). By leveraging the power of Quarkus and the `io.quarkus:quarkus-jackson` dependency, this module streamlines data serialization and deserialization, promoting efficient data interchange.
 
 == Module Overview
 
-The `entrypoint/dto` module focuses on defining Data Transfer Objects (DTOs) that serve as standardized representations of data for communication between different layers of our application. These DTOs are designed to abstract away the specific communication protocol, ensuring a consistent interface for our APIs regardless of whether they are REST or GraphQL endpoints.
+The `entrypoint/dto` module plays a crucial role in maintaining a clear boundary between the core business domain and external interfaces. It enables consistent and controlled transformation of data, ensuring that data passed between layers remains coherent and adheres to Clean Architecture principles.
 
 == Java Base Package
 
@@ -12,18 +12,18 @@ The Java base package for this module is: `com.nauth.example.entrypoint.dto`
 
 == Key Responsibilities
 
-- Define DTOs that represent data exchanged between layers and communication protocols.
-- Encapsulate data fields and provide appropriate getters and setters.
-- Decouple the internal structure of the application from external communication details.
-
-== Usage
-
-1. Navigate to the `clean-architecture-project/application/entrypoint/dto` directory.
-2. Define your DTO classes, focusing on encapsulating data and ensuring communication protocol independence.
+- Implement transformations between core domain models and Data Transfer Objects (DTOs).
+- Utilize the `io.quarkus:quarkus-jackson` dependency for efficient JSON serialization and deserialization.
 
 == Dependencies
 
-This module may be used by the following:
+This module depends on the following modules:
 
-- `application/entrypoint/api` to define input and output DTOs for REST GraphQL endpoints.
-- `application/entrypoint/graphql` to define input and output DTOs for GraphQL endpoints.
+- `domain/model`: Provides core domain models.
+- `io.quarkus:quarkus-jackson`: Enhances data serialization and deserialization capabilities.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/entrypoint/dto` directory.
+2. Open the `build.gradle` file and ensure the necessary dependencies are defined, including `io.quarkus:quarkus-jackson`.
+3. Implement transformation logic to ensure consistent data interchange between core domain models and DTOs.

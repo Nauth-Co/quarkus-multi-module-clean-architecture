@@ -1,10 +1,10 @@
 = Clean Architecture: EntryPoint GraphQL Module
 
-This module contains GraphQL builders to define the GraphQL schema and resolvers for querying and manipulating data.
+This module defines GraphQL schemas and resolvers to provide an additional layer of interaction for external clients with our microservices. It empowers clients to request precisely the data they need, promoting efficiency in data exchange.
 
 == Module Overview
 
-The `entrypoint/graphql` module is dedicated to setting up and defining the GraphQL schema for our Clean Architecture project. It provides a unified entry point for querying and manipulating data through GraphQL queries and mutations. By abstracting the data retrieval and manipulation, this module maintains the separation of concerns and the integrity of our architecture.
+The `entrypoint/graphql` module acts as an interface for external clients to interact with our microservices using the GraphQL query language. By defining schemas and resolvers, we enable clients to query and retrieve data in a tailored and efficient manner. This module maintains clear separation between layers and is the gateway for modern API interaction.
 
 == Java Base Package
 
@@ -12,19 +12,23 @@ The Java base package for this module is: `com.nauth.example.entrypoint.graphql`
 
 == Key Responsibilities
 
-- Define the GraphQL schema using GraphQL types, queries, and mutations.
-- Implement resolvers that bridge the GraphQL schema with the underlying business logic.
-- Ensure that the GraphQL API enforces the principles of Clean Architecture, maintaining clear boundaries between layers.
-
-== Usage
-
-1. Navigate to the `clean-architecture-project/application/entrypoint/graphql` directory.
-2. Define your GraphQL schema using GraphQL types, queries, and mutations.
-3. Implement resolvers that map GraphQL operations to corresponding business use cases.
+- Define GraphQL schemas using Quarkus annotations to represent the data structure of available queries and types.
+- Implement resolvers that bridge schema definitions with the core business logic in the `business/usecase` module.
+- Leverage shared Data Transfer Objects (DTOs) from the `entrypoint/dto` module to ensure consistent data representation.
 
 == Dependencies
 
-This module may depend on the following:
+This module depends on the following modules:
 
-- `business/usecase` for executing business logic.
-- `domain/model` for accessing domain models.
+- `domain/model`: Provides core domain models.
+- `entrypoint/dto`: Implements transformations between domain models and DTOs.
+- `business/usecase`: Implements business logic and use cases.
+- `io.quarkus:quarkus-smallrye-graphql`: Quarkus extension for GraphQL support.
+
+== Usage
+
+1. Navigate to the `clean-architecture-project/entrypoint/graphql` directory.
+2. Open the `build.gradle` file and ensure the necessary dependencies are defined.
+3. Define your GraphQL schemas using Quarkus annotations and establish relationships between types.
+4. Implement GraphQL resolvers that connect schema definitions to core business logic.
+5. Utilize shared Data Transfer Objects (DTOs) from the `entrypoint/dto` module for consistent data representation.
