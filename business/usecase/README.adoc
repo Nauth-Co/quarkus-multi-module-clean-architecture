@@ -1,10 +1,10 @@
-= Clean Architecture: Business Use Case Module
+= Clean Architecture: Business Usecase Module
 
-This module defines interfaces business use cases, encapsulating the core application logic that defines the application's behavior.
+This module is dedicated to encapsulating business logic through well-defined use case contracts. As a core component of the `business` layer, the `business/usecase` module defines the various behaviors and operations that drive the core application logic. By abstracting the business rules, this module promotes modularity, maintainability, and testability.
 
 == Module Overview
 
-The `business/usecase` module forms the core of our Clean Architecture project. It houses the implementations of business use cases that orchestrate the application's behavior. By centralizing the core logic within this module, we maintain a clear distinction between application behavior and external components.
+The `business/usecase` module plays a central role in articulating the business logic use cases that our application relies upon. By encapsulating these use cases in distinct contracts, this module ensures that the core behavior of the application is well-defined, accessible, and adheres to Clean Architecture principles.
 
 == Java Base Package
 
@@ -12,17 +12,21 @@ The Java base package for this module is: `com.nauth.example.business.usecase`
 
 == Key Responsibilities
 
-- Implement business use cases that define the application's behavior.
-- Utilize the interfaces defined in `business/repository` and `business/service` modules for data access and external interactions.
-- Enforce the principles of Clean Architecture, focusing on maintaining separation of concerns and layer boundaries.
+- Define business logic use case contracts that encapsulate specific behaviors and operations.
+- Ensure separation of concerns by abstracting business rules from other layers of the application.
+
+== Dependency on the `domain-model` Module
+
+The `business/usecase` module depends on the `domain-model` module to establish a clear connection between use case contracts and core domain models. This dependency ensures that the defined use case contracts operate on the core domain models consistently.
+
+== Configuration Steps
+
+1. Navigate to the `clean-architecture-project/business/usecase` directory.
+2. Open the `build.gradle` file and ensure the necessary dependencies, including `domain-model`, are defined.
+3. Define use case contracts that encapsulate specific behaviors and operations of the application.
 
 == Usage
 
-1. Navigate to the `clean-architecture-project/business/usecase` directory.
-2. Define your business use cases interfaces, encapsulating the core logic of the application.
-
-== Dependencies
-
-This module depend on the following:
-
-- `domain/model` for accessing domain models.
+1. Implement use case classes that adhere to the defined contracts, encapsulating the application's core behaviors.
+2. Ensure that use case implementations interact with core domain models in alignment with the `domain-model` module.
+3. Test and validate the behavior of use case implementations to ensure proper application functionality.
