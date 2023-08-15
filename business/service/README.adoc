@@ -1,10 +1,10 @@
 = Clean Architecture: Business Service Module
 
-This module defines interfaces for integrated external service operations, promoting a clear separation between business logic and external integrations.
+This module is responsible for encapsulating integration logic between our core domain models and external service contracts. As a key component of the `business` layer, the `business-service` module bridges the gap between internal business logic and external service interactions. By managing these integrations, this module ensures that the core business logic remains insulated from the complexities of external services.
 
 == Module Overview
 
-The `business/service` module focuses on defining interfaces that represent integrated external service operations. These interfaces encapsulate interactions with external services, such as APIs, third-party systems, or other external components. By creating clear contracts for these operations, the module reinforces Clean Architecture's separation of concerns and ensures that external integrations do not intrude upon the core business logic.
+The `business-service` module acts as a critical intermediary layer, orchestrating the interaction between core domain models and external services. This includes handling data transformations, request-response interactions, error handling, and more. By encapsulating these integration responsibilities, this module maintains the separation of concerns and promotes modularity.
 
 == Java Base Package
 
@@ -12,16 +12,27 @@ The Java base package for this module is: `com.nauth.example.business.service`
 
 == Key Responsibilities
 
-- Define interfaces for operations that interact with external services.
-- Abstract away the implementation details of external service interactions, ensuring that the core business logic remains isolated from external components.
+- Manage the integration between core domain models and external service contracts.
+- Implement logic for transforming data, handling external API calls, and managing responses.
 
-== Usage
+== Dependency on the `domain-model` Module
 
-1. Navigate to the `clean-architecture-project/business/service` directory.
-2. Define your service interfaces, encapsulating operations that interact with external components.
+The `business-service` module depends on the `domain-model` module to establish a direct relationship with core domain models. This ensures that the service contracts defined in this module align seamlessly with the core domain models they interact with.
 
 == Dependencies
 
-This module depend on the following:
+This module depends on the following modules:
 
-- `domain/model` for accessing domain models.
+- `domain/model`: Provides core domain models.
+
+== Configuration Steps
+
+1. Navigate to the `clean-architecture-project/business/service` directory.
+2. Open the `build.gradle` file and ensure the necessary dependencies, including `domain-model`, are defined.
+3. Define the integration logic that connects core domain models with external service contracts.
+
+== Usage
+
+1. Implement data transformations, error handling, and request-response interactions in alignment with external service contracts.
+2. Ensure that the `domain-model` module's domain models are integrated appropriately.
+3. Test and validate the integration logic to ensure proper functionality.

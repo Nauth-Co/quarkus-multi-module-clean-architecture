@@ -1,10 +1,10 @@
 = Clean Architecture: Business Repository Module
 
-This module defines interfaces for accepted persistence operations, ensuring a clear separation between business logic and data storage.
+This module is dedicated to defining data repository interfaces that encapsulate database persistence operations. As a crucial component of the `business` layer, the `business-repository` module ensures clear boundaries between core business logic and data storage mechanisms. By enforcing contracts through interfaces, this module enhances maintainability, promotes testing, and adheres to Clean Architecture principles.
 
 == Module Overview
 
-The `business/repository` module encapsulates the contracts for data access operations within the application. It defines interfaces that represent the accepted persistence operations that the application requires. By abstracting data access behind these interfaces, the module promotes a clean separation between business logic and data storage, adhering to the principles of Clean Architecture.
+The `business-repository` module plays a pivotal role in maintaining separation between core business domain logic and data persistence operations. Through well-defined repository interfaces, this module outlines the methods and operations required to interact with the database.
 
 == Java Base Package
 
@@ -12,16 +12,34 @@ The Java base package for this module is: `com.nauth.example.business.repository
 
 == Key Responsibilities
 
-- Define interfaces for accepted data access operations, such as CRUD (Create, Read, Update, Delete) methods.
-- Abstract away the implementation details of data storage technologies, ensuring that the business logic remains decoupled from specific data storage mechanisms.
+- Define data repository interfaces that represent required data persistence operations for core domain models.
+- Enforce clean separation between business logic and data storage through interface-driven development.
 
-== Usage
+== Dependency on the `domain-model` Module
+
+The `business-repository` module depends on the `domain-model` module to establish a clear connection between repository contracts and core domain models. This ensures that the defined repository interfaces align seamlessly with the underlying data structure.
+
+== Configuration Steps
 
 1. Navigate to the `clean-architecture-project/business/repository` directory.
-2. Define your repository interfaces, encapsulating accepted persistence operations.
+2. Open the `build.gradle` file and ensure the necessary dependencies, including `domain-model`, are defined.
+3. Define repository interfaces that encapsulate the required data persistence operations for your domain models.
+4. Adhere to Clean Architecture principles, focusing on single responsibility and clear separation.
 
-== Dependencies
 
-This module depend on the following:
+== Example Repository Interface
 
-- `domain/model` for accessing domain models.
+Consider the example of a repository interface for a hypothetical domain model `User`:
+
+```java
+package com.nauth.example.business.repository;
+
+import com.nauth.example.domain.model.User;
+
+public interface UserRepository {
+    User findById(Long id);
+    List<User> findAll();
+    void save(User user);
+    void delete(User user);
+}
+```
