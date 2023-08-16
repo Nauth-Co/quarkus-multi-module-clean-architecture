@@ -1,10 +1,10 @@
 = Clean Architecture: Infrastructure Properties Module
 
-This module handles environment properties mapping, providing a centralized location for configuration and settings.
+Welcome to the `infrastructure/properties` module, a cornerstone of streamlined configuration management. This module serves as a dedicated repository for managing configuration properties across the application, providing a clean and organized approach to handling configuration.
 
 == Module Overview
 
-The `infrastructure/properties` module focuses on environment properties mapping and configuration management within our Clean Architecture project. It serves as a central hub for storing and managing various configuration settings, ensuring that our application's behavior can be fine-tuned without altering the core business logic.
+The `infrastructure/properties` module offers a centralized solution for managing configuration properties in the application. By abstracting away the complexities of handling configuration files, this module simplifies the process of mapping properties to Java classes, leading to clean and maintainable code.
 
 == Java Base Package
 
@@ -12,15 +12,22 @@ The Java base package for this module is: `com.nauth.example.infrastructure.prop
 
 == Key Responsibilities
 
-- Implement environment properties mapping for configuration settings.
-- Provide a centralized location for retrieving configuration values.
-- Decouple configuration management from the business logic.
+- Centralize the management of configuration properties for the entire application.
+- Simplify the process of mapping configuration properties to Java classes using annotations provided by Quarkus.
 
-== Usage
+== No Dependencies, Just Streamlined Configuration
+
+One distinctive feature of the `infrastructure/properties` module is that it doesn't have any external dependencies. Its primary focus is on providing a streamlined approach to configuration management without introducing unnecessary complexity or additional libraries.
+
+== Configuration Mapping
+
+Here's how to utilize the `infrastructure/properties` module to streamline configuration mapping:
 
 1. Navigate to the `clean-architecture-project/infrastructure/properties` directory.
-2. Implement environment properties mapping and configuration retrieval logic.
+2. Open the `build.gradle` file and ensure that there are no additional dependencies beyond the standard Java and Gradle plugins.
+3. Create Java classes that mirror the structure of your configuration properties.
+4. Use annotations provided by Quarkus to map properties from your configuration files to these Java classes.
 
-== Dependencies
+== Streamlined Configuration, Clean Code
 
-This module does not have direct dependencies on other modules. It's used to centralize configuration settings that may be utilized by various components.
+By utilizing the `infrastructure/properties` module, you abstract away the intricacies of configuration files and properties management. This allows developers to focus on the essential aspects of the application while maintaining clean and organized code.
